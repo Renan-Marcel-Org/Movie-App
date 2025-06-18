@@ -29,6 +29,12 @@ To stop the services, run:
 docker-compose down
 ```
 
+### Using the Pre-built Image from GitHub
+
+The `docker-compose.override.yml` file is configured to use a pre-built Docker image for the `mymovieapp.api` service directly from the GitHub Container Registry (`ghcr.io/renan-marcel-org/my-movie-app-api:latest`). This approach allows you to run the application without needing to build the Docker image locally, which can be faster and more convenient.
+
+If you prefer to build the image locally, or make custom modifications, you can comment out or modify the `image` directive within the `mymovieapp.api` service definition in the `docker-compose.override.yml` file and ensure your `docker-compose.yml` specifies a local build context.
+
 ## Database Migrations
 
 This project uses Entity Framework Core for database migrations.
