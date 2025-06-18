@@ -11,6 +11,17 @@ on:
         branches:
             - main
             - develop
+    workflow_dispatch:
+      inputs:
+        input:
+          description: "Build service"
+          required: false
+          default: "build"
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write
 
 jobs:
     build:
