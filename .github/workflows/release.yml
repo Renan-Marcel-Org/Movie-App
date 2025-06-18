@@ -55,7 +55,7 @@ jobs:
               id: tree
               with:
                 exclude: ".git|.github|.vscode|.idea|bin|obj|packages|node_modules|wwwroot"
-                depth: 1
+                depth: 2
                 path: ./
 
             - name: Install GitVersion
