@@ -81,11 +81,11 @@ jobs:
 
             - name: Build Docker image
               run: |
-                docker build -t ghcr.io/Renan-Marcel-Org/my-movie-app-api:${{ steps.gitversion.outputs.SemVer }} -f Dockerfile.Build .
+                docker build -t ghcr.io/renan-marcel-org/my-movie-app-api:${{ steps.gitversion.outputs.SemVer }} -f Dockerfile.Build .
 
             - name: Push Docker image
               run: |
-                docker push ghcr.io/Renan-Marcel-Org/my-movie-app-api:${{ steps.gitversion.outputs.SemVer }}
+                docker push ghcr.io/renan-marcel-org/my-movie-app-api:${{ steps.gitversion.outputs.SemVer }}
 
             - name: Create Release
               id: create_release
