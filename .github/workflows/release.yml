@@ -130,6 +130,13 @@ jobs:
                 asset_path: ./src/MyMovieApp.Infrastructure/MyMovieApp.Infrastructure.sql
                 asset_name: MyMovieApp.Infrastructure.sql
                 asset_content_type: application/sql
-
-              
+            
+            - name: Upload test results artifact
+              uses: actions/upload-artifact@v4
+              if: always() # Uploads artifact even if tests fail
+              with:
+                name: test-results
+                path: ./TestResults/**/*.trx
+                retention-days: 5
+                          
 
