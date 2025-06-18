@@ -1,0 +1,40 @@
+name-template: 'v$NEXT_PATCH_VERSION 🌟'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories: 
+  - title: 🚀 Features
+    labels: [feature]
+  - title: 🐛 Bug Fixes
+    labels: [bug]
+  - title: 📚 Documentation
+    labels: [documentation]
+  - title: 🧰 Maintenance
+    labels: [maintenance]
+    
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+no-changes-template: '- No changes in this release.'
+template: |
+  ## Changes
+
+  $CHANGES
+
+  ## Contributors
+
+  $CONTRIBUTORS
+
+branches:
+  - main
+  - develop
+  - 'release/*'
+  - 'hotfix/*'
+  - 'feature/*'
+  - 'bugfix/*'
+  - 'support/*'
+exclude-labels:
+  - 'skip-changelog'
+  - 'wip'
+  - 'do not merge'
+  - 'invalid'
+  - 'question'
+  - 'duplicate'
+  - 'help wanted'
+  - 'good first issue'
